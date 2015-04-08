@@ -1,8 +1,11 @@
 {
-  "name": "async",
-  "description": "Higher-order functions and common patterns for asynchronous code",
+  "name": "utils-async",
+  "description": "the mighty async.js as single modules",
   "main": "lib/async.js",
   "author": "Caolan McMahon",
+  "contributors": [
+    "Andi Neck"
+  ],
   "version": "0.9.2",
   "keywords": [
     "async",
@@ -12,20 +15,18 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/caolan/async.git"
+    "url": "https://github.com/intesso/utils-async.git"
   },
   "bugs": {
-    "url": "https://github.com/caolan/async/issues"
+    "url": "https://github.com/intesso/utils-async/issues"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/caolan/async/raw/master/LICENSE"
+    "url": "https://github.com/intesso/utils-async/raw/master/LICENSE"
   },
   "devDependencies": {
-    "nodeunit": ">0.0.0",
-    "uglify-js": "1.2.x",
-    "nodelint": ">0.0.0",
-    "lodash": ">=2.4.1"
+    "nodeunit-to-tape": "^1.0.2",
+    "tape": "^4.0.0"
   },
   "jam": {
     "main": "lib/async.js",
@@ -39,7 +40,7 @@
     ]
   },
   "scripts": {
-    "test": "nodeunit test/test-async.js"
+    "test": "tape test/test*.js"
   },
   "spm": {
     "main": "lib/async.js"
