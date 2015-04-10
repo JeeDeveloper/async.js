@@ -1,7 +1,7 @@
 {
-  "name": "utils-async",
+  "name": "async.js",
   "description": "the mighty async.js as single modules",
-  "main": "lib/async.js",
+  "main": "async.js",
   "author": "Caolan McMahon",
   "contributors": [
     "Andi Neck"
@@ -15,23 +15,25 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/intesso/utils-async.git"
+    "url": "https://github.com/intesso/async.js.git"
   },
   "bugs": {
-    "url": "https://github.com/intesso/utils-async/issues"
+    "url": "https://github.com/intesso/async.js/issues"
   },
   "license": {
     "type": "MIT",
-    "url": "https://github.com/intesso/utils-async/raw/master/LICENSE"
+    "url": "https://github.com/intesso/async.js/raw/master/LICENSE"
   },
   "devDependencies": {
+    "browserify": "^9.0.8",
     "nodeunit-to-tape": "^1.0.2",
-    "tape": "^4.0.0"
+    "tape": "^4.0.0",
+    "uglifyify": "^3.0.1"
   },
   "jam": {
-    "main": "lib/async.js",
+    "main": "async.js",
     "include": [
-      "lib/async.js",
+      "async.js",
       "README.md",
       "LICENSE"
     ],
@@ -40,13 +42,15 @@
     ]
   },
   "scripts": {
-    "test": "tape test/test*.js"
+    "test": "tape test/test*.js",
+    "build":  "browserify -s async async.js -o dist/async.js",
+    "uglify": "browserify -s async -t [ uglifyify --no-sourcemap ] async.js -o dist/async.min.js"
   },
   "spm": {
-    "main": "lib/async.js"
+    "main": "async.js"
   },
   "volo": {
-    "main": "lib/async.js",
+    "main": "async.js",
     "ignore": [
       "**/.*",
       "node_modules",

@@ -1,10 +1,4 @@
-
-var doSeries = function (fn) {
-  return function () {
-    var args = Array.prototype.slice.call(arguments);
-    return fn.apply(null, [async.eachSeries].concat(args));
-  };
-};
+var async = {};
 
 var _each = function (arr, iterator) {
   for (var i = 0; i < arr.length; i += 1) {
@@ -35,7 +29,12 @@ var _asyncMap = function (eachfn, arr, iterator, callback) {
   }
 };
 
-var async = {};
+var doSeries = function (fn) {
+  return function () {
+    var args = Array.prototype.slice.call(arguments);
+    return fn.apply(null, [async.eachSeries].concat(args));
+  };
+};
 
 async.series = function (tasks, callback) {
   callback = callback || function () {};
