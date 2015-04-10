@@ -2,6 +2,9 @@
 
 subset of [async.js](https://github.com/caolan/async).
 
+[![browser support](https://ci.testling.com/intesso/async.js.png)
+](https://ci.testling.com/intesso/async.js)
+
 ## why?
 
 
