@@ -4,9 +4,13 @@ subset of [async.js](https://github.com/caolan/async).
 
 ## why?
 
+
 because [async.js](https://github.com/caolan/async) is awesome and fool proof.
+
 most of the time we only use very little of what async offers.
+
 therefore we extracted only these functions and bundled them together.
+
 development file size: `4kb` instead of [29.6kb](https://github.com/caolan/async#download)
 
 
@@ -14,16 +18,16 @@ development file size: `4kb` instead of [29.6kb](https://github.com/caolan/async
 
 ### Collections
 
-* [`each`](#each)
-* [`eachSeries`](#eachSeries)
-* [`map`](#map)
-* [`mapSeries`](#mapSeries)
+  - `each`
+  - `eachSeries`
+  - `map`
+  - `mapSeries`
+
 
 ### Control Flow
 
-* [`series`](#seriestasks-callback)
-* [`parallel`](#parallel)
-
+  - `parallel`
+  - `series`
 
 ## install
 
@@ -38,6 +42,8 @@ you can use this module with browserify or use the `global` versions with `async
   - 2.9kb [async.min.js]()
 
 There is even a smaller subset if needed with browserify:
+
+
 `var async = require('async.js/parallel');`
 which contains:
   - `each`
