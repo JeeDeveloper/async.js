@@ -31,11 +31,10 @@ var _asyncMap = function (eachfn, arr, iterator, callback) {
 
 function only_once(fn) {
   var called = false;
-  var self = this;
   return function() {
     if (called) throw new Error("Callback was already called.");
     called = true;
-    fn.apply(self, arguments);
+    fn.apply(this, arguments);
   }
 }
 
